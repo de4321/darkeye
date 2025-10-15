@@ -22,76 +22,6 @@
 - [ ] 插件化爬虫
 - [ ] 绿色模式
 
-# 项目整体的结构
-AVmanagement_project/
-├── main.py                  # 入口，启动 QApplication 和主窗口
-├── config.py                # 配置与路径管理（兼容 PyInstaller）
-├── settings.ini             # INI 配置文件,这个不跟踪，由程序生成
-├── requirements.txt         # 运行环境的要求
-├── README.md                # 基本的文档说明
-├── main.spec                # pyinstaller打包配置文件
-├── mkdocs.yml               # mkdocs文档的配置
-
-
-├── controller/          #控制
-│   ├── __init__.py
-│   ├── GlobalSignalBus.py       #全局信号
-│   └── MessageService.py        #信息框弹出
-
-├── scripts/                   #使用脚本
-│   ├── build-nuitka.ps1
-│   ├── build-pyinstaller.ps1   # powershell，构建项目的命令行
-│   ├── cloc_by_file.py
-│   └── clocCode.ps1           # powershell，看项目有多少行代码的命令行
-
-├── core/ 
-│   ├── __init__.py
-│   ├── chart/                  # 绘图
-│   ├── crawler/                # 爬虫
-│   ├── database/               # SQLite 操作封装
-│   ├── recommendation/         # 推荐算法
-
-├── ui/                      # UI 构造模块（可以手写或加载 .ui 文件）
-│   ├── __init__.py
-│   ├── main_window.py       # 主窗口逻辑
-│   ├── widgets/      # 自定义控件
-│   ├── statistics/   # 统计表控件
-│   ├── pages/        #页面    
-│   ├── basic/        #基本的控件    
-│   ├── base/         #基础  
-
-
-├── resources/            # 图片、图标、数据库等静态资源,是需要复制到打包后的文件夹里的
-│   ├── icons/            #内部的图标
-│   ├── public/
-│   │   ├── actressimages/  #女演员头像
-│   │   ├── actorimages/    #男演员头像
-│   │   ├── workcovers/     #作品的封面
-│   │   └── public.db        #公有数据库   
-│   ├── private/            
-│   │   └── private.db      #私有数据库
-│   ├── config/
-│   │   ├── sesitive_words.txt  #敏感词过滤表
-│   │   ├── tag_map.json        #文字转换标签表
-│   └── sql/              #sql语句
-
-├── tests/                   # 单元测试
-
-├── docs/                             # 文档
-│   ├── api.md
-│   ├── av.md
-│   ├── AV数据库概念ERD.excalidraw
-│   ├── bug.md
-│   ├── data-collect.md
-│   ├── db-design.md
-│   ├── develop.md
-│   ├── future.md
-│   ├── index.md
-│   ├── recommendation.md
-│   ├── ui-design.md
-│   ├── usage.md
-│   └── 软件架构.excalidraw
-
 
 # 快速开始
 #使用下面创建虚拟环境
@@ -100,6 +30,7 @@ conda activate avlite
 
 pip install -r requirements.txt
 
+下载后请复制public基本数据包到resource/文件夹下面
 ## 运行
 python main.py
 
