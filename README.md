@@ -22,6 +22,7 @@
 - [ ] 插件化爬虫
 - [ ] 绿色模式
 
+<img width="3840" height="2283" alt="workpage" src="https://github.com/user-attachments/assets/95355235-b408-409e-aff1-2b57ee0ba342" />
 
 # 快速开始
 #使用下面创建虚拟环境
