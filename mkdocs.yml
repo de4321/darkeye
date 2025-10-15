@@ -1,0 +1,28 @@
+site_name: JAV管理工具
+
+
+nav:
+  - 首页: index.md
+  - 使用方法: usage.md
+  - UI设计: ui-design.md
+  - 数据库设计: db-design.md
+  - 开发注意事项: develop.md
+  - API: api.md
+  - BUG: bug.md
+  - 未来功能展望: future.md
+  - 数据收集: data-collect.md
+  - 推荐算法: recommendation.md
+  - AV知识: av.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: ["."]
+
+markdown_extensions:
+- admonition
+- toc:
+    permalink: true

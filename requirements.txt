@@ -1,0 +1,11 @@
+numpy
+matplotlib
+pyside6
+bs4
+requests
+pyinstaller
+mkdocs
+mkdocs-material
+mkdocstrings[python]
+opencv[python]
+PySideSix-Frameless-Window
